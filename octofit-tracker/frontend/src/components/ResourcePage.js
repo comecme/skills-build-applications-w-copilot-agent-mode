@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { buildEndpoint, extractItems } from './api';
+import { extractItems } from './api';
 
 function formatValue(value) {
   if (value === null || value === undefined || value === '') {
@@ -13,14 +13,14 @@ function formatValue(value) {
   return String(value);
 }
 
-function ResourcePage({ title, resource, description, columns, emptyMessage }) {
+function ResourcePage({ title, endpoint, description, columns, emptyMessage }) {
   const [items, setItems] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const endpoint = buildEndpoint(resource);
+  const searchFieldId = `${title.toLowerCase().replace(/\s+/g, '-')}-search`;
 
   useEffect(() => {
     async function loadItems() {
@@ -83,11 +83,11 @@ function ResourcePage({ title, resource, description, columns, emptyMessage }) {
       <div className="card-body p-4">
         <form className="row g-3 align-items-end resource-toolbar mb-4" onSubmit={(event) => event.preventDefault()}>
           <div className="col-md-7 col-lg-8">
-            <label htmlFor={`${resource}-search`} className="form-label fw-semibold">
+            <label htmlFor={searchFieldId} className="form-label fw-semibold">
               Search {title.toLowerCase()}
             </label>
             <input
-              id={`${resource}-search`}
+              id={searchFieldId}
               type="search"
               className="form-control form-control-lg"
               placeholder={`Filter ${title.toLowerCase()} data`}
