@@ -1,0 +1,6 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "django-admin": true,
+        "npm run build": true
+    }
+}
