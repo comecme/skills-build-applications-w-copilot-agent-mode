@@ -6,6 +6,8 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+console.log('OctoFit frontend bootstrapping with codespace:', process.env.REACT_APP_CODESPACE_NAME || 'localhost');
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
