@@ -2,9 +2,11 @@ from rest_framework import serializers
 from .models import User, Team, Workout, Activity, Leaderboard
 
 class UserSerializer(serializers.ModelSerializer):
+    team_name = serializers.CharField(source='team.name', read_only=True)
+
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'team']
+        fields = ['id', 'username', 'email', 'team', 'team_name']
 
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:

@@ -16,7 +16,7 @@ function Users() {
         { label: 'ID', key: 'id' },
         { label: 'Username', key: 'username' },
         { label: 'Email', key: 'email' },
-        { label: 'Team', render: (user) => user.team ?? 'Unassigned' },
+        { label: 'Team', render: (user) => user.team_name || user.team || 'Unassigned' },
       ]}
     />
   );
