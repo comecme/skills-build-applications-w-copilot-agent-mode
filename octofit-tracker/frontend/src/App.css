@@ -1,0 +1,85 @@
+.app-shell {
+  background:
+    radial-gradient(circle at top left, rgba(25, 135, 84, 0.15), transparent 30%),
+    linear-gradient(180deg, #f4fbf7 0%, #eef4f8 100%);
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.app-subtitle {
+  max-width: 40rem;
+}
+
+.app-nav .nav-link {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+}
+
+.app-nav .nav-link.active {
+  background: linear-gradient(135deg, #198754 0%, #157347 100%);
+}
+
+.resource-card {
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2rem rgba(18, 38, 63, 0.08);
+  overflow: hidden;
+}
+
+.resource-card .card-header {
+  background: linear-gradient(135deg, rgba(25, 135, 84, 0.08), rgba(13, 110, 253, 0.08));
+  border-bottom: 1px solid rgba(18, 38, 63, 0.08);
+}
+
+.resource-toolbar {
+  gap: 0.75rem;
+}
+
+.resource-table {
+  margin-bottom: 0;
+}
+
+.resource-table thead th {
+  background: #f8fafc;
+  border-bottom-width: 1px;
+  color: #4b5563;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.resource-table tbody tr {
+  vertical-align: middle;
+}
+
+.resource-modal-backdrop {
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.resource-modal .modal-content {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(15, 23, 42, 0.24);
+}
+
+.resource-kv dt {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resource-kv dd {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .resource-card {
+    border-radius: 1rem;
+  }
+}
