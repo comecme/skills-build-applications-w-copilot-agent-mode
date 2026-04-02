@@ -21,12 +21,15 @@ function App() {
       <header className="app-header border-bottom shadow-sm">
         <div className="container py-4">
           <div className="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
-            <div>
-              <span className="badge rounded-pill text-bg-success mb-2 px-3 py-2">OctoFit Tracker</span>
-              <h1 className="display-6 fw-bold mb-2">Frontend connected to the Django REST API</h1>
-              <p className="text-secondary mb-0 app-subtitle">
-                Browse live users, teams, workouts, activities, and leaderboard data.
-              </p>
+            <div className="d-flex align-items-start gap-3 app-brand-wrap">
+              <img src="/octofitapp-small.png" alt="OctoFit logo" className="app-logo" />
+              <div>
+                <span className="badge rounded-pill text-bg-success mb-2 px-3 py-2">OctoFit Tracker</span>
+                <h1 className="display-6 fw-bold mb-2">Frontend connected to the Django REST API</h1>
+                <p className="text-secondary mb-0 app-subtitle">
+                  Browse live users, teams, workouts, activities, and leaderboard data.
+                </p>
+              </div>
             </div>
             <nav aria-label="OctoFit sections">
               <div className="nav nav-pills gap-2 flex-wrap justify-content-lg-end app-nav">
